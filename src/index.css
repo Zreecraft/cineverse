@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Elegant gold cinematic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(26, 26, 26, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(38, 38, 38, 0.7);
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Linear-gradient overlay for hero banner */
+.hero-vignette {
+  background: linear-gradient(to top, #0A0A0A 0%, rgba(10, 10, 10, 0.8) 20%, rgba(10, 10, 10, 0) 100%);
+}
+
+.hero-side-vignette {
+  background: linear-gradient(to right, #0A0A0A 0%, rgba(10, 10, 10, 0.7) 40%, rgba(10, 10, 10, 0) 100%);
+}
+
+/* Cinematic filmstrip background lines */
+.filmstrip-grid {
+  background-size: 60px 60px;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
